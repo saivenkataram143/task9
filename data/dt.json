@@ -1,0 +1,50 @@
+{
+  "profiles":[
+    {
+      "id":1,
+    "name":"Samba",
+    "label":"Manager",
+    "company":"Infosys",
+    "Eduction":[
+      {
+        "degree":"B.Tech(CSE)",
+        "institute":"PSCMR",
+        "data":["90%","2015-2019"]
+      },
+      {
+        "Inter":"M.P.C",
+        "institute":"P.B.Siddharatha",
+        "data":["90%","2013-2015"]
+      },
+      {
+        "SSC":"Xth",
+        "institute":"RS",
+        "data":["90%","2012-2013"]
+      }
+    ]
+
+  {
+    "id":2,
+  "name":"Ram",
+  "label":"CEO",
+  "company":"Infosys",
+
+
+  },
+{
+  "id":3,
+"name":"harsha",
+"label":"HR",
+"company":"Infosys",
+},
+
+{
+  "id":4,
+"name":"Ravi teja",
+"label":"Team Leader",
+"company":"Infosys",
+
+
+},
+  ]
+}
