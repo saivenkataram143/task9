@@ -25,6 +25,7 @@
     }
 
     console.log(para);
+
     function loadJSON(file,callback){
       var xhr=new XMLHttpRequest();
       xhr.overrideMimeType("application/json");
@@ -41,6 +42,10 @@
       var dt=JSON.parse(text);
       console.log(dt);
       profileData(dt.profiles);
+      fun_carrer(dt.carrer);
+  fun_education(dt.education);
+  fun_acheive(dt.acheivements);
+  fun_technical(dt.technical);
     })
 function profileData(pro)
  {
@@ -48,11 +53,109 @@ function profileData(pro)
    {
     if(para[1]==pro[i].id)
     {
+
       var div=document.querySelector(".c1");
-      div.textContent=pro[i].name;
+      var img=document.createElement("img");
+      img.src=pro[i].img;
+      div.appendChild(img);
+      var h1=document.createElement("h2");
+      h1.textContent=pro[i].name;
+      div.appendChild(h1);
+      var h2=document.createElement("h3");
+      h2.textContent=pro[i].label;
+      div.appendChild(h2);
+      var h3=document.createElement("h3");
+      h3.textContent=pro[i].company;
+      div.appendChild(h3);
 
     }
   }
 }
+    var d2=document.querySelector(".c2");
+
+
+function fun_carrer(car){
+  var head=document.createElement("h2");
+  head.textContent="Carrer Objective";
+  d2.appendChild(head);
+  var he=document.createElement("hr");
+  d2.appendChild(he);
+  var li=document.createElement("p");
+  li.textContent=car.info;
+  d2.appendChild(li);
+
+}
+
+function fun_education(edu){
+  var head=document.createElement("h2");
+  head.textContent="Education Qualification";
+d2.appendChild(head);
+  var he=document.createElement("hr");
+  d2.appendChild(he);
+  var list=document.createElement("ul");
+  d2.appendChild(list);
+for(var i=0;i<edu.length;i++)
+ {
+   var listItem=document.createElement("li");
+   listItem.textContent=edu[i].degree;
+   list.appendChild(listItem);
+
+   var listItem=document.createElement("p");
+   listItem.textContent=edu[i].Institute;
+   list.appendChild(listItem);
+
+   var listItem=document.createElement("p");
+   listItem.textContent=edu[i].data;
+   list.appendChild(listItem);
+ }
+}
+function fun_acheive(ach){
+  var head=document.createElement("header");
+  head.textContent="Acheivements";
+  d2.appendChild(head);
+  var he=document.createElement("hr");
+  d2.appendChild(he);
+  var list=document.createElement("ul");
+  d2.appendChild(list);
+for(var i=0;i<ach.length;i++)
+ {
+   var listItem=document.createElement("li");
+   listItem.innerHTML=ach[i].name;
+   list.appendChild(listItem);
+ }
+}
+function fun_technical(tech){
+  var head=document.createElement("header");
+  head.textContent="Technical";
+  d2.appendChild(head);
+  var he=document.createElement("h3");
+  d2.appendChild(he);
+  var list=document.createElement("ul");
+  d2.appendChild(list);
+for(var i=0;i<tech.length;i++)
+ {
+   var listItem=document.createElement("li");
+   listItem.textContent=tech[i].name;
+   list.appendChild(listItem);
+ }
+}
+function fun_skills(skills){
+  var head=document.createElement("h2");
+    head.textContent="skills";
+  d2.appendChild(he);
+var h2=document.createElement("hr");
+  d2.appendChild(h2);
+var table=document.createElement("table");
+d2.appendChild(table);
+ for(var i=0;i<skills.length;i++)
+{
+tr="<tr><td>"+skills[i].name+"</td><td>"+skills[i].data+"</tr>";
+}
+table.innerHTML=tr;
+table.border="1";
+}
+
+
+
   </script>
 </html>

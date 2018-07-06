@@ -1,50 +1,72 @@
 {
   "profiles":[
     {
-      "id":1,
+      "img":"images/profile.png",
+    "id":1,
     "name":"Samba",
     "label":"Manager",
-    "company":"Infosys",
-    "Eduction":[
-      {
-        "degree":"B.Tech(CSE)",
-        "institute":"PSCMR",
-        "data":["90%","2015-2019"]
-      },
-      {
-        "Inter":"M.P.C",
-        "institute":"P.B.Siddharatha",
-        "data":["90%","2013-2015"]
-      },
-      {
-        "SSC":"Xth",
-        "institute":"RS",
-        "data":["90%","2012-2013"]
-      }
-    ]
+    "company":"Infosys"
+  },
 
-  {
-    "id":2,
+{
+    "img":"images/profile.png",
+  "id":2,
   "name":"Ram",
   "label":"CEO",
-  "company":"Infosys",
-
-
-  },
+  "company":"Infosys"
+},
 {
+  "img":"images/profile.png",
   "id":3,
 "name":"harsha",
 "label":"HR",
-"company":"Infosys",
+"company":"Infosys"
 },
-
 {
+  "img":"images/profile.png",
   "id":4,
 "name":"Ravi teja",
 "label":"Team Leader",
-"company":"Infosys",
-
-
+"company":"Infosys"
+}
+],
+"carrer":{
+    "info":"To work hard man is success"
+  },
+  "education":[
+    {
+    "degree":"B.Tech",
+    "Institute":"PSCMR",
+    "data":["2015-19","69%"]
+  },
+  {
+  "degree":"10+2",
+  "Institute":"P.B.Sidaharatha Arts and Science",
+  "data":["2013-15","69%"]
 },
-  ]
+{
+"degree":"S.S.C",
+"Institute":"RAKESH HS",
+"data":["2012-13","68%"]
+}
+],
+"acheivements":[
+{
+  "name":"IIT Bobay certification in 2016<b>1<sup>st</sup>Prize</b>in<q>self Defence</q>"
+}
+],
+"technical":[
+  {
+    "name":"c"
+  },
+  {
+  "name":"java"
+}
+],
+"skills":[
+  {
+  "name":"communication skills",
+  "data":["reading","pki","musiv"]
+}
+]
 }

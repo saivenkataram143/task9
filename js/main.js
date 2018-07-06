@@ -5,7 +5,7 @@ function loadJSON(file,callback){
   xhr.onreadystatechange=function()  {
     if(xhr.readyState===4 && xhr.status=="200")
     {
-      callback(xhr.responseText);
+    callback(xhr.responseText);
     }
   };
   xhr.send();
@@ -14,8 +14,8 @@ loadJSON('data/dt.json',function(text){
   var dt=JSON.parse(text);
   console.log(dt);
   profileData(dt.profiles);
-  EductionData(dt.Eduction);
 })
+
 var mainDiv=document.querySelector(".main");
 function profileData(pro) {
 //  var subDiv=document.createElement("div");
@@ -40,12 +40,19 @@ function profileData(pro) {
   link.textContent="View Profile";
   function EductionData(edu) {
     for (var i = 0; i < edu.length; i++) {
-      var subDiv=document.createElement("div");
+      var subDiv=document.createElement(".c2");
       subDiv.classList.add("subdiv");
       mainDiv.appendChild(subDiv);
-      var Eduction=document.createElement("h2");
-      Eduction.textContent=edu[i].Eduction;
-      subDiv.appendChild(Eduction);
+      var degree=document.createElement("h2");
+      degree.textContent=edu[i].degree;
+      var institute=document.createElement("h3");
+      institute.textContent=pro[i].institute;
+      var data=document.createElement("h3");
+      data.textContent=pro[i].data;
+      subDiv.appendChild(degree);
+      subDiv.appendChild(institute);
+      subDiv.appendChild(data);
+
     }
 
   }
@@ -55,16 +62,24 @@ function profileData(pro) {
   subDiv.appendChild(company);
   subDiv.appendChild(link);
 
+
+}
+}
 /*function EductionData(edu) {
   for (var i = 0; i < edu.length; i++) {
-    var subDiv=document.createElement("div");
+    var subDiv=document.createElement(".c2");
     subDiv.classList.add("subdiv");
     mainDiv.appendChild(subDiv);
-    var Eduction=document.createElement("h2");
-    Eduction.textContent=edu[i].Eduction;
-    subDiv.appendChild(Eduction);
+    var degree=document.createElement("h2");
+    degree.textContent=edu[i].degree;
+    var institute=document.createElement("h3");
+    institute.textContent=pro[i].institute;
+    var data=document.createElement("h3");
+    data.textContent=pro[i].data;
+    subDiv.appendChild(degree);
+    subDiv.appendChild(institute);
+    subDiv.appendChild(data);
+
   }
 
 }*/
-}
-}
